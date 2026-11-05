@@ -17,6 +17,10 @@ no system image (and the image hosts are outside the TLS egress allowlist).
 **State as of 2026-11-05 (session end):** backend running on `0.0.0.0:8000`,
 smoke **40/40**, acceptance **38/38**, release APK built and signed.
 
+**Delivered commit:** `d3505a2` on branch `arena/3045e0c0-baby` (87 files, 17,270
+insertions), pushed to `origin`. The APK and the SQLite database are intentionally
+**not** committed — rebuild with `bash android/tools/build_apk.sh --release`.
+
 ---
 
 ## Completed
