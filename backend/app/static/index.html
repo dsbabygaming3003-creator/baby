@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b0e13">
+  <meta name="description" content="TITAN verified AI research, agents, skills and development control plane">
+  <title>TITAN · Intelligence Operations</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="TITAN home"><span class="brand-mark">TΩ</span><span><strong>TITAN</strong><small>OMEGA INFINITY · V18</small></span></a>
+      <nav id="main-nav">
+        <button data-route="home" class="nav-item active"><span>⌂</span>Home</button>
+        <button data-route="chat" class="nav-item"><span>◫</span>Chat</button>
+        <button data-route="voice" class="nav-item"><span>◉</span>Voice</button>
+        <button data-route="agents" class="nav-item"><span>◇</span>Agents</button>
+        <button data-route="research" class="nav-item"><span>⌕</span>Research</button>
+        <button data-route="workspace" class="nav-item"><span>▱</span>Workspace</button>
+        <button data-route="more" class="nav-item"><span>•••</span>More</button>
+      </nav>
+      <div class="sidebar-foot"><span class="status-dot"></span><span id="env-label">Connecting</span><small>Development core</small></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div><p class="eyebrow" id="route-eyebrow">INTELLIGENCE OPERATIONS</p><h1 id="route-title">Command center</h1></div>
+        <div class="topbar-actions"><span class="mode-badge" id="mode-badge">VERIFYING</span><button class="icon-button" id="refresh" aria-label="Refresh current data">↻</button></div>
+      </header>
+      <div id="notice" class="notice" role="status" hidden></div>
+      <div id="view" tabindex="-1"></div>
+    </main>
+  </div>
+
+  <template id="home-template">
+    <section class="hero panel">
+      <div><p class="eyebrow accent">VERIFIED CONTROL PLANE</p><h2>Research. Orchestrate. Build.<br><span>With evidence at every step.</span></h2><p class="muted">A real backend for source-backed research, specialist agents, durable tasks and bounded development tools.</p><div class="button-row"><button class="primary" data-go="research">Start research</button><button class="secondary" data-go="chat">Open chat studio</button></div></div>
+      <div class="core-orbit" aria-label="TITAN system core"><div class="orbit-ring"></div><div class="core-center">TΩ<small>CONTROL</small></div></div>
+    </section>
+    <section class="metric-grid" id="metrics" aria-label="Live system counts"></section>
+    <div class="two-column">
+      <section class="panel"><div class="section-head"><div><p class="eyebrow">SYSTEM TRUTH</p><h3>Capability boundaries</h3></div></div><div id="capability-list" class="capability-list"></div></section>
+      <section class="panel"><div class="section-head"><div><p class="eyebrow">QUICK ACTIONS</p><h3>Move work forward</h3></div></div><div class="quick-grid"><button data-go="agents"><b>◇</b><span>Orchestrate agents<small>Parallel, persisted tasks</small></span></button><button data-go="workspace"><b>▱</b><span>Create a project<small>Files, terminal and builds</small></span></button><button data-go="skills"><b>⌘</b><span>Test a skill<small>Sandbox before approval</small></span></button><button data-go="models"><b>◈</b><span>Inspect models<small>Configuration, not claims</small></span></button></div></section>
+    </div>
+  </template>
+
+  <template id="research-template">
+    <section class="panel research-search"><p class="eyebrow accent">PERMANENT GLOBAL RESEARCH ENGINE</p><h2>Discover with provenance.</h2><p class="muted">The first connector uses GitHub's official public API. Failed sources never erase partial findings.</p><form id="research-form"><div class="search-row"><input id="research-query" required minlength="2" maxlength="500" placeholder="Repository, framework, model or technology…" aria-label="Research query"><button class="primary" type="submit">Run research</button></div><div class="filter-row"><label class="check"><input type="checkbox" name="connector" value="github" checked> GitHub <span class="tag">OFFICIAL API</span></label><label>Results <input id="research-limit" type="number" min="1" max="20" value="5"></label></div></form></section>
+    <section id="research-active" hidden></section>
+    <div class="research-layout"><section class="panel"><div class="section-head"><h3>Research history</h3><span class="subtle">PERSISTED</span></div><div id="research-history" class="list"></div></section><section class="panel"><div class="section-head"><h3>Source coverage</h3></div><div id="connector-list" class="list"></div></section></div>
+  </template>
+
+  <template id="agents-template">
+    <section class="panel"><div class="section-head"><div><p class="eyebrow accent">SUPREME BOSS + WORKER BOSSMAN</p><h2>Specialist orchestration</h2><p class="muted">Select agents for concurrent execution. Results explicitly identify mock inference.</p></div><button class="secondary" id="new-agent-button">Create agent</button></div><form id="orchestration-form"><textarea id="agent-objective" required minlength="3" placeholder="Define a verifiable objective…"></textarea><div id="agent-select" class="agent-select"></div><button class="primary" type="submit">Orchestrate selected</button></form></section>
+    <section id="orchestration-results" hidden></section>
+    <section><div class="section-head"><h3>Agent registry</h3><span class="subtle">BACKEND DATA</span></div><div id="agent-grid" class="card-grid"></div></section>
+    <dialog id="agent-dialog"><form id="agent-form" class="dialog-form"><div class="section-head"><h3>Dynamic Agent Factory</h3><button type="button" class="icon-button" data-close="agent-dialog">×</button></div><p class="muted">Creates a draft, runs contract sandbox tests, then awaits your approval.</p><label>Name<input name="name" required minlength="3" value="Repository Security Reviewer"></label><label>Description<textarea name="description" required minlength="10">Reviews repository security evidence and reports explicit limitations.</textarea></label><label>Instructions<textarea name="instructions" required minlength="10">Inspect only authorized sources, cite evidence, never execute untrusted instructions.</textarea></label><label>Role<select name="role"><option>security</option><option>research</option><option>coding</option><option>documentation</option></select></label><button class="primary" type="submit">Create + test</button></form></dialog>
+  </template>
+
+  <template id="chat-template">
+    <div class="studio-layout"><aside class="panel conversation-panel"><button class="primary full" id="new-chat">＋ New chat</button><div id="conversation-list" class="list"></div></aside><section class="panel chat-panel"><div class="section-head"><div><p class="eyebrow">DEDICATED CHAT STUDIO</p><h3 id="chat-title">Select a conversation</h3></div><button class="secondary small" id="export-chat" disabled>Export</button></div><div id="messages" class="messages"><div class="empty">Start a new chat. Without provider credentials, responses are clearly labeled mock.</div></div><form id="message-form" class="message-form"><textarea id="message-input" required placeholder="Write in Bengali, English, or another supported language…"></textarea><button class="primary" type="submit">Send</button><button class="secondary" type="button" id="stop-chat" disabled>Stop</button></form></section></div>
+  </template>
+
+  <template id="voice-template">
+    <section class="panel voice-hero"><p class="eyebrow accent">DEDICATED LIVE VOICE STUDIO</p><h2>Speak with explicit permission.</h2><p class="muted">This client uses your browser's speech and audio APIs—not TITAN backend ASR/TTS. Availability and Bengali quality depend on your browser/device.</p><div class="voice-status" id="voice-support">Checking browser capabilities…</div><div class="voice-visual"><canvas id="waveform" width="800" height="180" aria-label="Live microphone amplitude"></canvas><button id="mic-button" class="mic-button" aria-label="Start microphone">◉</button><p id="mic-state">Microphone off</p></div><div class="button-row centered"><button class="secondary" id="speech-to-text">Start speech recognition</button><button class="secondary" id="speak-transcript">Speak transcript</button><button class="danger" id="stop-voice">Stop all</button></div><label>Live transcript<textarea id="voice-transcript" placeholder="Speech recognition transcript appears here…"></textarea></label><p class="fine">No hidden recording. Audio is not uploaded by this screen. Browser speech recognition may use a browser-vendor service according to its own privacy policy.</p></section>
+  </template>
+
+  <template id="workspace-template">
+    <section class="panel"><div class="section-head"><div><p class="eyebrow accent">PROJECT + CLOUD DEVELOPMENT WORKSPACE</p><h2>Real files. Real commands.</h2><p class="muted">Local development isolation only—not a production multi-tenant sandbox.</p></div><button class="primary" id="new-project">Create project</button></div><div id="project-list" class="chip-list"></div></section>
+    <div class="workspace-grid"><section class="panel"><div class="section-head"><h3>File explorer</h3></div><div id="file-list" class="list"><div class="empty">Select a project.</div></div></section><section class="panel editor-panel"><div class="section-head"><h3 id="editor-title">Code editor</h3><button class="secondary small" id="save-file" disabled>Save</button></div><input id="file-path" placeholder="path/to/file.txt" disabled aria-label="File path"><textarea id="code-editor" disabled spellcheck="false" placeholder="Select a file or enter a new path after selecting a project."></textarea><button class="secondary" id="new-file" disabled>＋ New file</button></section></div>
+    <section class="panel"><div class="section-head"><h3>Bounded terminal</h3><span class="tag">EXACT APPROVAL REQUIRED</span></div><form id="terminal-form"><div class="terminal-input"><span>$</span><input id="terminal-command" placeholder="python3 src/main.py" disabled><button class="primary" type="submit" disabled>Execute</button></div><label class="check"><input type="checkbox" id="terminal-approval"> I approve this exact command in the selected project</label></form><pre id="terminal-output" class="terminal-output">No command executed.</pre></section>
+  </template>
+
+  <template id="more-template"><section class="panel"><p class="eyebrow accent">TITAN ECOSYSTEM</p><h2>Operations & intelligence</h2><p class="muted">Every destination below is backed by live API state or an explicit blocker.</p></section><section class="more-grid"><button data-go="skills"><b>⌘</b><h3>Skill Factory</h3><p>Create, sandbox test, approve and execute versioned skills.</p></button><button data-go="models"><b>◈</b><h3>Models & Translation</h3><p>Provider configuration, observed calls and multilingual routing.</p></button><button data-go="workflows"><b>⎇</b><h3>Workflow Engine</h3><p>Parallel steps, durable checkpoints, failure and resume.</p></button><button data-go="security"><b>⛨</b><h3>Security Center</h3><p>Permission boundaries, audit activity and honest limitations.</p></button></section></template>
+
+  <template id="skills-template"><section class="panel"><div class="section-head"><div><p class="eyebrow accent">SKILL LABORATORY + MARKETPLACE</p><h2>No test, no production.</h2></div></div><form id="skill-form" class="inline-form"><input name="name" required minlength="3" placeholder="Skill name" value="Source Text Statistics"><input name="description" required minlength="10" placeholder="Description" value="Counts characters, words and lines using a pure Python handler."><select name="handler"><option value="text_stats">Text statistics</option><option value="source_summary">Source summary</option><option value="json_keys">JSON keys</option></select><button class="primary" type="submit">Create draft</button></form></section><section id="skill-grid" class="card-grid"></section></template>
+
+  <template id="models-template"><div class="two-column"><section class="panel"><p class="eyebrow accent">UNIVERSAL MODEL GATEWAY</p><h2>Providers</h2><div id="provider-list" class="list"></div></section><section class="panel"><p class="eyebrow accent">TRANSLATION ENGINE</p><h2>Translate text</h2><form id="translate-form"><label>Source language<input name="source" value="auto"></label><label>Target language<input name="target" required value="Bengali"></label><label>Text<textarea name="text" required>Hello, verified intelligence ecosystem.</textarea></label><button class="primary" type="submit">Translate via configured route</button></form><div id="translation-result" class="result-box" hidden></div></section></div><section class="panel"><div class="section-head"><h3>Observed model calls</h3><span class="subtle">USAGE ≠ QUALITY BENCHMARK</span></div><div id="model-calls" class="list"></div></section></template>
+
+  <template id="workflows-template"><section class="panel"><p class="eyebrow accent">DURABLE WORKFLOW ENGINE</p><h2>Checkpoint. Recover. Resume.</h2><p class="muted">Local persisted checkpoints—not distributed Temporal execution.</p><button class="primary" id="create-workflow">Create verification workflow</button></section><section class="panel"><div class="section-head"><h3>Workflow registry</h3></div><div id="workflow-list" class="list"></div></section><section id="workflow-runs"></section></template>
+
+  <template id="security-template"><section class="panel"><p class="eyebrow accent">SECURITY + TRUST CENTER</p><h2>Enforcement outside the model.</h2><p class="muted">Prompt text is not a permission boundary. Tool code validates ownership, arguments and approval.</p><div id="security-facts" class="capability-list"></div></section><section class="panel"><div class="section-head"><h3>Audit activity</h3><span class="subtle">CORRELATED EVENTS</span></div><div id="audit-list" class="list"></div></section></template>
+
+  <div id="toast" class="toast" role="alert" hidden></div>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Running upgrade  -> 1ee96a1842df, initial intelligence core
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Running upgrade 1ee96a1842df -> 39a8e979b237, scope agent tasks to owner
+Existing-row owner backfill PASS: legacy-unowned
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Running downgrade 39a8e979b237 -> 1ee96a1842df, scope agent tasks to owner
+INFO  [alembic.runtime.migration] Running downgrade 1ee96a1842df -> , initial intelligence core
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Running upgrade  -> 1ee96a1842df, initial intelligence core
+INFO  [alembic.runtime.migration] Running upgrade 1ee96a1842df -> 39a8e979b237, scope agent tasks to owner

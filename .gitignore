@@ -1,0 +1,40 @@
+# Local environments and secrets
+.venv/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Runtime data (never commit tenant data, credentials, databases or artifacts)
+backend/data/
+data/
+workspaces/
+*.db
+*.sqlite3
+
+# JavaScript
+node_modules/
+dist/
+
+# Android / Gradle
+.gradle/
+**/build/
+local.properties
+*.apk
+*.aab
+*.keystore
+*.jks
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store

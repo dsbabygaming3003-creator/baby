@@ -1,0 +1,65 @@
+{
+  "retrieved_at": "2026-11-05T00:33:50Z",
+  "checks": {
+    "health": {
+      "status": 200,
+      "body": {
+        "status": "ok",
+        "version": "0.1.0"
+      }
+    },
+    "system": {
+      "status": 200,
+      "agent_count": 20,
+      "environment": "development"
+    },
+    "live_github_research": {
+      "http_status": 202,
+      "task_id": "3ce9dc6e-08db-4881-96b9-5c3ee44c7d74",
+      "task_status": "failed",
+      "sources": [
+        {
+          "connector": "github",
+          "status": "failed"
+        }
+      ],
+      "documents": []
+    },
+    "streaming_chat": {
+      "http_status": 200,
+      "contains_delta": true,
+      "contains_done": true,
+      "explicit_mock": true
+    },
+    "console": {
+      "http_status": 200,
+      "has_research_navigation": true,
+      "has_voice_studio": true,
+      "has_research_engine": true
+    },
+    "live_github_research_after_tls_fix": {
+      "http_status": 202,
+      "task_id": "ad62b227-9905-437d-8db8-eae1341d050c",
+      "task_status": "succeeded",
+      "sources": [
+        {
+          "connector": "github",
+          "status": "succeeded",
+          "error": null
+        }
+      ],
+      "documents": [
+        {
+          "title": "langchain-ai/langgraph",
+          "url": "https://github.com/langchain-ai/langgraph",
+          "verification_status": "verified_official_api"
+        },
+        {
+          "title": "google-gemini/gemini-fullstack-langgraph-quickstart",
+          "url": "https://github.com/google-gemini/gemini-fullstack-langgraph-quickstart",
+          "verification_status": "verified_official_api"
+        }
+      ]
+    }
+  }
+}
