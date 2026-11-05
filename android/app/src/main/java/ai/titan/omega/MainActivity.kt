@@ -217,7 +217,7 @@ private fun Metric(label: String, value: Int, modifier: Modifier = Modifier) {
 @Composable
 private fun ChatScreen(state: TitanUiState, send: (String) -> Unit) {
     var input by remember { mutableStateOf("") }
-    LazyColumn(Modifier.weight(1f)) { item { Text(state.chat.ifBlank { "No messages. Hosted AI requires server credentials; mock output is labeled." }) } }
+    LazyColumn(Modifier.fillMaxWidth().height(360.dp)) { item { Text(state.chat.ifBlank { "No messages. Hosted AI requires server credentials; mock output is labeled." }) } }
     OutlinedTextField(input, { input = it }, Modifier.fillMaxWidth(), label = { Text("Message") })
     Spacer(Modifier.height(8.dp))
     Button({ send(input); input = "" }, enabled = !state.working && input.isNotBlank(), modifier = Modifier.fillMaxWidth()) { Text(if (state.working) "Waiting for provider" else "Send") }
