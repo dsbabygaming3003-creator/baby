@@ -129,6 +129,24 @@ instead:
 Download URL:
 `https://github.com/dsbabygaming3003-creator/baby/raw/arena/3045e0c0-baby/releases/titan-omega-release.apk`
 
+### Google Drive delivery
+
+The APKs are also uploaded to the owner's Google Drive, in the folder
+**TITAN OMEGA INFINITY V18**:
+
+| File | Drive id | Size |
+|---|---|---|
+| `TITAN-Omega-Infinity-v18.0.0-release.apk` | `1HsGPlqw3Ksa0kWTufIUgJ7bW8N0PGE0q` | 721,391 B |
+| `TITAN-Omega-Infinity-v18.0.0-debug.apk` | `1Lk7NW2aW-cGkw6dRTrKRRac6n6Zsem6N` | 721,397 B |
+| `SHA256SUMS.txt` | `1pwoRHrDveXrF9qOwHtZM44TJPLsKwD-l` | 178 B |
+
+Folder id `1e_p1LmmkIU03LSrQjF-4YzQ4nkt7gyiA`.
+
+**End-to-end delivery verified (twice):** the copy re-fetched *from Google Drive* has the
+same SHA-256 as the local build (`297a7ee1…`), the same MD5 as Drive's own metadata
+(`291f2ae53bf21c2e6abc0bcf4b90d51b`), and passes `apksigner verify` (v1 + v2 + v3) —
+so the file that arrives on a phone is byte-identical to the signed build.
+
 **End-to-end delivery verified:** the copy re-fetched from GitHub has a byte-identical
 git blob (`5d485446b5ed8fc2b157f121a65c922612621eee`), the same SHA-256, and passes
 `apksigner verify` (v1 + v2 + v3) on the *downloaded* file — not only on the local build.

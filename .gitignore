@@ -27,6 +27,9 @@ android/*.keystore
 # ...except the published release artifacts, which are delivered to devices
 !releases/*.apk
 
+# --- Connector staging ----------------------------------------------------
+google_drive/
+
 # --- Toolchain staging ----------------------------------------------------
 /tmp/titan-*
 

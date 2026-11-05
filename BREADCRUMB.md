@@ -29,6 +29,13 @@ Download:
 (sha256 `297a7ee1…`; the re-fetched copy was verified byte-identical and still
 `apksigner`-valid). Rebuild with `bash android/tools/build_apk.sh --release`.
 
+**Google Drive delivery (done 2026-11-05):** folder **TITAN OMEGA INFINITY V18**
+(`1e_p1LmmkIU03LSrQjF-4YzQ4nkt7gyiA`) holds
+`TITAN-Omega-Infinity-v18.0.0-release.apk` (`1HsGPlqw3Ksa0kWTufIUgJ7bW8N0PGE0q`),
+`TITAN-Omega-Infinity-v18.0.0-debug.apk` (`1Lk7NW2aW-cGkw6dRTrKRRac6n6Zsem6N`) and
+`SHA256SUMS.txt` (`1pwoRHrDveXrF9qOwHtZM44TJPLsKwD-l`). The copy re-fetched from Drive
+matched SHA-256 **and** MD5 and re-passed `apksigner verify` (v1+v2+v3).
+
 ---
 
 ## Completed
