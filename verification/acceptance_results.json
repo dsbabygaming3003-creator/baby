@@ -1,0 +1,1014 @@
+{
+  "base_url": "http://127.0.0.1:8000/api/v1",
+  "generated_at": "2026-11-05T01:03:22+0000",
+  "total": 38,
+  "passed": 38,
+  "failed": 0,
+  "results": [
+    {
+      "id": "AT-01",
+      "name": "at 01 backend health",
+      "status": "PASS",
+      "message": "HTTP 200, status=ok, version=18.0.0",
+      "evidence": {
+        "status": "ok",
+        "service": "TITAN OMEGA INFINITY",
+        "version": "18.0.0",
+        "edition": "V18 — ULTIMATE SUPREME BUILD",
+        "env": "development",
+        "database": "sqlite",
+        "server_time": "2026-11-05T01:03:07.910212+00:00"
+      },
+      "duration_ms": 1.2
+    },
+    {
+      "id": "AT-02",
+      "name": "at 02 capability honesty",
+      "status": "PASS",
+      "message": "12 capabilities, statuses=['available', 'blocked', 'degraded']",
+      "evidence": {
+        "backend_api": {
+          "status": "available",
+          "detail": "FastAPI application is serving"
+        },
+        "database": {
+          "status": "available",
+          "detail": "sqlite+aiosqlite profile"
+        },
+        "model_gateway": {
+          "status": "available",
+          "detail": "gateway online; provider reachability reported separately",
+          "providers": [
+            {
+              "provider": "openai",
+              "status": "no_key",
+              "detail": "OPENAI_API_KEY is not configured",
+              "reachable": false
+            },
+            {
+              "provider": "anthropic",
+              "status": "no_key",
+              "detail": "ANTHROPIC_API_KEY is not configured",
+              "reachable": false
+            },
+            {
+              "provider": "gemini",
+              "status": "no_key",
+              "detail": "GEMINI_API_KEY is not configured",
+              "reachable": false
+            },
+            {
+              "provider": "groq",
+              "status": "no_key",
+              "detail": "GROQ_API_KEY is not configured",
+              "reachable": false
+            },
+            {
+              "provider": "huggingface",
+              "status": "no_key",
+              "detail": "HUGGINGFACE_API_KEY is not configured",
+              "reachable": false
+            },
+            {
+              "provider": "ollama",
+              "status": "unreachable",
+              "detail": "ConnectError: All connection attempts failed",
+              "reachable": false
+            },
+            {
+              "provider": "vllm",
+              "status": "error",
+              "detail": "HTTP 404 from http://127.0.0.1:8000/v1/models",
+              "reachable": true
+            },
+            {
+              "provider": "openai_compatible",
+              "status": "no_key",
+              "detail": "set TITAN_PROVIDER_BASE_URLS.openai_compatible and an API key",
+              "reachable": false
+            }
+          ]
+        },
+        "research_connectors": {
+          "status": "available",
+          "detail": "connector registry online",
+          "connectors": [
+            {
+              "connector_id": "github.v1",
+              "platform": "github",
+              "version": "1.0.0",
+              "status": "empty",
+              "detail": "no repositories matched the query",
+              "http_status": null,
+              "latency_ms": 346.0
+            },
+            {
+              "connector_id": "pypi.v1",
+              "platform": "pypi",
+              "version": "1.0.0",
+              "status": "empty",
+              "detail": "no packages matched the query",
+              "http_status": null,
+              "latency_ms": 431.0
+            },
+            {
+              "connector_id": "npm.v1",
+              "platform": "npm",
+              "version": "1.0.0",
+              "status": "ok",
+              "detail": "",
+              "http_status": null,
+              "latency_ms": 103.0
+            },
+            {
+              "connector_id": "arxiv.v1",
+              "platform": "arxiv",
+              "version": "1.0.0",
+              "status": "inaccessible",
+              "detail": "ConnectError: TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
+              "http_status": null,
+              "latency_ms": 16.0
+            },
+            {
+              "connector_id": "huggingface.v1",
+              "platform": "huggingface",
+              "version": "1.0.0",
+              "status": "inaccessible",
+              "detail": "connection error: TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
+              "http_status": null,
+              "latency_ms": 44.0
+            },
+            {
+              "connector_id": "stackexchange.v1",
+              "platform": "stackexchange",
+              "version": "1.0.0",
+              "status": "inaccessible",
+              "detail": "connection error: TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
+              "http_status": null,
+              "latency_ms": 24.0
+            },
+            {
+              "connector_id": "reddit.v1",
+              "platform": "reddit",
+              "version": "1.0.0",
+              "status": "inaccessible",
+              "detail": "connection error: TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
+              "http_status": null,
+              "latency_ms": 46.0
+            },
+            {
+              "connector_id": "openalex.v1",
+              "platform": "openalex",
+              "version": "1.0.0",
+              "status": "inaccessible",
+              "detail": "connection error: TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
+              "http_status": null,
+              "latency_ms": 14.0
+            },
+            {
+              "connector_id": "crossref.v1",
+              "platform": "crossref",
+              "version": "1.0.0",
+              "status": "inaccessible",
+              "detail": "connection error: TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
+              "http_status": null,
+              "latency_ms": 16.0
+            },
+            {
+              "connector_id": "wikipedia.v1",
+              "platform": "wikipedia",
+              "version": "1.0.0",
+              "status": "inaccessible",
+              "detail": "connection error: TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
+              "http_status": null,
+              "latency_ms": 47.0
+            },
+            {
+              "connector_id": "hn.v1",
+              "platform": "hackernews",
+              "version": "1.0.0",
+              "status": "inaccessible",
+              "detail": "connection error: TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
+              "http_status": null,
+              "latency_ms": 14.0
+            },
+            {
+              "connector_id": "devto.v1",
+              "platform": "devto",
+              "version": "1.0.0",
+              "status": "inaccessible",
+              "detail": "connection error: TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
+              "http_status": null,
+              "latency_ms": 20.0
+            }
+          ]
+        },
+        "sandbox": {
+          "status": "available",
+          "detail": "process-isolation backend",
+          "command_allowlist_size": 46
+        },
+        "android_build_toolchain": {
+          "status": "available",
+          "detail": "aapt2=yes java=yes kotlinc=yes d8=yes apksigner=yes android.jar=yes",
+          "d8_version": "D8 (Google R8) 8.2.2-dev",
+          "apk_pipeline": "aapt2 -> kotlinc -> d8 -> zip -> apksigner (v1+v2+v3)"
+        },
+        "device_install_test": {
+          "status": "blocked",
+          "detail": "no emulator or adb device is attached to this host"
+        },
+        "voice_asr_server": {
+          "status": "degraded",
+          "detail": "no ASR engine binary installed; Android client uses on-device ASR"
+        },
+        "voice_tts_server": {
+          "status": "degraded",
+          "detail": "no TTS engine binary installed; Android client uses on-device TTS"
+        },
+        "translation": {
+          "status": "available",
+          "detail": "detection is local; translation requires a configured provider"
+        },
+        "model_training": {
+          "status": "degraded",
+          "detail": "dataset preparation implemented; no training runtime installed"
+        },
+        "browser_automation": {
+          "status": "blocked",
+          "detail": "no browser engine available in this deployment"
+        }
+      },
+      "duration_ms": 1138.6
+    },
+    {
+      "id": "AT-03",
+      "name": "at 03 auth register login",
+      "status": "PASS",
+      "message": "registered as developer, bad password -> 401",
+      "evidence": {
+        "registered_role": "developer",
+        "me_status": 200,
+        "bad_password_status": 401,
+        "scopes": []
+      },
+      "duration_ms": 121.1
+    },
+    {
+      "id": "AT-04",
+      "name": "at 04 auth required",
+      "status": "PASS",
+      "message": "anonymous -> 401, forged token -> 401",
+      "evidence": {
+        "anonymous": 401,
+        "forged": 401
+      },
+      "duration_ms": 21.5
+    },
+    {
+      "id": "AT-05",
+      "name": "at 05 agents registry",
+      "status": "PASS",
+      "message": "20 core agents, 9 dynamic",
+      "evidence": {
+        "core": 20,
+        "dynamic": 9
+      },
+      "duration_ms": 6.3
+    },
+    {
+      "id": "AT-06",
+      "name": "at 06 agent execution contracts",
+      "status": "PASS",
+      "message": "all 29 agents carry a complete execution contract, 100 tool grants",
+      "evidence": {
+        "agents": 29,
+        "tool_grants": 100
+      },
+      "duration_ms": 5.9
+    },
+    {
+      "id": "AT-07",
+      "name": "at 07 tool registry",
+      "status": "PASS",
+      "message": "25 tools across 14 categories, all with full contracts",
+      "evidence": {
+        "tools": 25,
+        "categories": [
+          "api_client",
+          "audio",
+          "build_system",
+          "code_editor",
+          "database",
+          "file_system",
+          "github",
+          "image",
+          "model_execution",
+          "security",
+          "terminal",
+          "testing",
+          "translation",
+          "web_research"
+        ]
+      },
+      "duration_ms": 5.6
+    },
+    {
+      "id": "AT-08",
+      "name": "at 08 tool permission enforced",
+      "status": "PASS",
+      "message": "ungranted scope -> PERMISSION_DENIED, audit read -> 403",
+      "evidence": {
+        "tool_error_code": "PERMISSION_DENIED",
+        "audit_http": 403
+      },
+      "duration_ms": 9.9
+    },
+    {
+      "id": "AT-09",
+      "name": "at 09 model registry",
+      "status": "PASS",
+      "message": "20 models, 18 with verified identifiers, 7 providers",
+      "evidence": {
+        "models": 20,
+        "verified": 18,
+        "unverified_ids": [
+          "qwen3:8b",
+          "Qwen/Qwen3-32B"
+        ],
+        "providers": [
+          "anthropic",
+          "gemini",
+          "groq",
+          "huggingface",
+          "ollama",
+          "openai",
+          "vllm"
+        ]
+      },
+      "duration_ms": 3.4
+    },
+    {
+      "id": "AT-10",
+      "name": "at 10 provider honesty",
+      "status": "PASS",
+      "message": "8 providers, none falsely 'ready', secret values never exposed",
+      "evidence": {
+        "providers": [
+          [
+            "openai",
+            "no_key"
+          ],
+          [
+            "anthropic",
+            "no_key"
+          ],
+          [
+            "gemini",
+            "no_key"
+          ],
+          [
+            "groq",
+            "no_key"
+          ],
+          [
+            "huggingface",
+            "no_key"
+          ],
+          [
+            "ollama",
+            "unreachable"
+          ],
+          [
+            "vllm",
+            "error"
+          ],
+          [
+            "openai_compatible",
+            "no_key"
+          ]
+        ],
+        "secrets_configured": {
+          "OPENAI_API_KEY": false,
+          "ANTHROPIC_API_KEY": false,
+          "GEMINI_API_KEY": false,
+          "GROQ_API_KEY": false
+        }
+      },
+      "duration_ms": 9.7
+    },
+    {
+      "id": "AT-11",
+      "name": "at 11 research creat e task",
+      "status": "PASS",
+      "message": "task dfbcfd4fa49c43dda2e9ad48d6db85a8 created",
+      "evidence": {
+        "task_id": "dfbcfd4fa49c43dda2e9ad48d6db85a8",
+        "status": "pending"
+      },
+      "duration_ms": 7.2
+    },
+    {
+      "id": "AT-12",
+      "name": "at 12 research run live sources",
+      "status": "PASS",
+      "message": "30 documents, 12 findings, 3 connectors",
+      "evidence": {
+        "documents": 30,
+        "findings": 12,
+        "verified_documents": 15,
+        "report_path": "/home/user/baby/data/reports/research-dfbcfd4fa49c43dda2e9ad48d6db85a8.md",
+        "connectors": [
+          {
+            "connector_id": "github.v1",
+            "platform": "github",
+            "status": "ok",
+            "count": 15,
+            "detail": "",
+            "http_status": null,
+            "duration_ms": 1125.66
+          },
+          {
+            "connector_id": "npm.v1",
+            "platform": "npm",
+            "status": "ok",
+            "count": 15,
+            "detail": "",
+            "http_status": null,
+            "duration_ms": 349.18
+          },
+          {
+            "connector_id": "pypi.v1",
+            "platform": "pypi",
+            "status": "empty",
+            "count": 0,
+            "detail": "no packages matched the query",
+            "http_status": null,
+            "duration_ms": 124.64
+          }
+        ]
+      },
+      "duration_ms": 10587.2
+    },
+    {
+      "id": "AT-13",
+      "name": "at 13 research partial failure",
+      "status": "PASS",
+      "message": "12 connectors probed, per-source statuses {'github.v1': 'empty', 'pypi.v1': 'empty', 'npm.v1': 'ok', 'arxiv.v1': 'inaccessible', 'huggingface.v1': 'inaccessible', 'stackexchange.v1': 'inaccessible', 'reddit.v1': 'inaccessible', 'openalex.v1': 'inaccessible', 'crossref.v1': 'inaccessible', 'wikipedia.v1': 'inaccessible', 'hn.v1': 'inaccessible', 'devto.v1': 'inaccessible'}; non-ok sources isolated: ['github.v1', 'pypi.v1', 'arxiv.v1', 'huggingface.v1', 'stackexchange.v1', 'reddit.v1', 'openalex.v1', 'crossref.v1', 'wikipedia.v1', 'hn.v1', 'devto.v1']",
+      "evidence": {
+        "github.v1": "empty",
+        "pypi.v1": "empty",
+        "npm.v1": "ok",
+        "arxiv.v1": "inaccessible",
+        "huggingface.v1": "inaccessible",
+        "stackexchange.v1": "inaccessible",
+        "reddit.v1": "inaccessible",
+        "openalex.v1": "inaccessible",
+        "crossref.v1": "inaccessible",
+        "wikipedia.v1": "inaccessible",
+        "hn.v1": "inaccessible",
+        "devto.v1": "inaccessible"
+      },
+      "duration_ms": 1460.2
+    },
+    {
+      "id": "AT-14",
+      "name": "at 14 research verificat ion badges",
+      "status": "PASS",
+      "message": "15 verified / 15 unverified documents",
+      "evidence": {
+        "documents": 30,
+        "verified": 15,
+        "unverified": 15
+      },
+      "duration_ms": 7.8
+    },
+    {
+      "id": "AT-15",
+      "name": "at 15 research history and findings",
+      "status": "PASS",
+      "message": "12 tasks in history, 12 findings over connectors ['github.v1', 'npm.v1']",
+      "evidence": {
+        "tasks": 12,
+        "findings": 12,
+        "connectors": [
+          "github.v1",
+          "npm.v1"
+        ]
+      },
+      "duration_ms": 11.5
+    },
+    {
+      "id": "AT-16",
+      "name": "at 16 knowledge ingestion",
+      "status": "PASS",
+      "message": "document 7365890077f64fefb95a41636a937d49 ingested into the knowledge base",
+      "evidence": {
+        "knowledge_document_id": "406b7ce527944bebb3ea68905df3264c",
+        "status": "ingested"
+      },
+      "duration_ms": 14.2
+    },
+    {
+      "id": "AT-17",
+      "name": "at 17 rag hybrid retrieval",
+      "status": "PASS",
+      "message": "8 chunks, every chunk carries source attribution",
+      "evidence": {
+        "chunks": 8,
+        "sample": {
+          "document_id": "b1e72da400a44188bde22d19515188a9",
+          "chunk_index": 0,
+          "text": "Open-source self-hosted AI agent runtime and multi-agent framework for autonomous agent swarms. Agent memory, MCP tools, schedules, delegation, and 23+ LLM providers (Claude, GPT, Gemini, OpenRouter, Ollama). A practical Claude Code and LangChain alternative.",
+          "score": 0.092787,
+          "bm25_score": 1.13258,
+          "dense_score": 0.259391,
+          "source_url": "https://github.com/swarmclawai/swarmclaw",
+          "title": "swarmclawai/swarmclaw",
+          "verification_status": "verified",
+          "metadata": {
+            "knowledge_id": "b1e72da400a44188bde22d19515188a9",
+            "source_type": "research"
+          }
+        }
+      },
+      "duration_ms": 5.4
+    },
+    {
+      "id": "AT-18",
+      "name": "at 18 chat  conversat ion and message",
+      "status": "PASS",
+      "message": "reply in provider_mode=mock model=mock:gpt-4o-mini latency=1.0ms",
+      "evidence": {
+        "id": "20093540c2d94ddca9cdbd7a678960bd",
+        "content": "[MOCK PROVIDER MODE] No real LLM provider was reachable for this request.\nReason: anthropic: ANTHROPIC_API_KEY is not configured\nThis is a deterministic placeholder produced by TITAN's offline test provider — it is NOT model output and must not be treated as an answer.\nPayload: {\"provider_mode\": \"mock\", \"reason\": \"anthropic: ANTHROPIC_API_KEY is not configured\", \"model\": \"gpt-4o-mini\", \"echo_of_request\": \"আজকের অবস্থা সংক্ষেপে বলুন।\"}",
+        "model": "mock:gpt-4o-mini",
+        "provider_id": "mock",
+        "provider_mode": "mock",
+        "tokens_in": 15,
+        "tokens_out": 109,
+        "latency_ms": 1.0,
+        "cost_usd": 0.0,
+        "error": null
+      },
+      "duration_ms": 16.1
+    },
+    {
+      "id": "AT-19",
+      "name": "at 19 chat  persistence",
+      "status": "PASS",
+      "message": "2 persisted messages in 10 conversations",
+      "evidence": {
+        "messages": 2
+      },
+      "duration_ms": 8.0
+    },
+    {
+      "id": "AT-20",
+      "name": "at 20 memory write and scope",
+      "status": "PASS",
+      "message": "8 memory scopes written and listed (16 entries)",
+      "evidence": {
+        "scopes": [
+          "conversation",
+          "user",
+          "project",
+          "agent",
+          "skill",
+          "research",
+          "execution",
+          "recovery"
+        ],
+        "entries": 16
+      },
+      "duration_ms": 52.9
+    },
+    {
+      "id": "AT-21",
+      "name": "at 21 memory versioning",
+      "status": "PASS",
+      "message": "first write v1, duplicate write v2 on the same row (1 live row) — deduplicated",
+      "evidence": {
+        "first": {
+          "id": "c87d8b11875e48ad9f15e6091f623535",
+          "scope": "user",
+          "version": 1
+        },
+        "second": {
+          "id": "c87d8b11875e48ad9f15e6091f623535",
+          "scope": "user",
+          "version": 2
+        },
+        "rows_with_content": 1
+      },
+      "duration_ms": 16.6
+    },
+    {
+      "id": "AT-22",
+      "name": "at 22 terminal real execution",
+      "status": "PASS",
+      "message": "stdout='titan-ok && uname -s' exit_code=0 duration_ms=6.6",
+      "evidence": {
+        "command": "echo titan-ok && uname -s",
+        "exit_code": 0,
+        "stdout": "titan-ok && uname -s\n",
+        "stderr": "",
+        "duration_ms": 6.6,
+        "timed_out": false,
+        "truncated": false,
+        "ok": true
+      },
+      "duration_ms": 14.4
+    },
+    {
+      "id": "AT-23",
+      "name": "at 23 terminal allowlist",
+      "status": "PASS",
+      "message": "refused with error_code=BLOCKED_BY_POLICY",
+      "evidence": {
+        "command": "curl http://example.com",
+        "ok": false,
+        "exit_code": null,
+        "stdout": "",
+        "stderr": "command 'curl' is not in the allowlist (46 commands permitted)",
+        "duration_ms": 0.0,
+        "timed_out": false,
+        "truncated": false,
+        "error_code": "BLOCKED_BY_POLICY"
+      },
+      "duration_ms": 7.0
+    },
+    {
+      "id": "AT-24",
+      "name": "at 24 workflow graph validat ion",
+      "status": "PASS",
+      "message": "cyclic graph -> 400, valid DAG -> 201 (4ff82e0cca5a4a35b7c6fb695f589d22)",
+      "evidence": {
+        "cyclic": 400,
+        "valid": 201
+      },
+      "duration_ms": 9.2
+    },
+    {
+      "id": "AT-25",
+      "name": "at 25 workflow run dag",
+      "status": "PASS",
+      "message": "status=completed, completed=['a', 'b']",
+      "evidence": {
+        "run_id": "12c543004cc54c909f7e169e30224107",
+        "status": "completed",
+        "completed": [
+          "a",
+          "b"
+        ],
+        "pending": [],
+        "errors": [],
+        "step_results": {
+          "a": {
+            "status": "completed",
+            "step": "a",
+            "output": {
+              "command": "echo step-a",
+              "exit_code": 0,
+              "stdout": "step-a\n",
+              "stderr": "",
+              "duration_ms": 5.61,
+              "timed_out": false,
+              "truncated": false,
+              "ok": true
+            }
+          },
+          "b": {
+            "status": "completed",
+            "step": "b",
+            "output": {
+              "command": "echo step-b",
+              "exit_code": 0,
+              "stdout": "step-b\n",
+              "stderr": "",
+              "duration_ms": 5.18,
+              "timed_out": false,
+              "truncated": false,
+              "ok": true
+            }
+          }
+        },
+        "duration_ms": 14.579261999642767
+      },
+      "duration_ms": 23.1
+    },
+    {
+      "id": "AT-26",
+      "name": "at 26 workflow checkpoint resume",
+      "status": "PASS",
+      "message": "run 12c543004cc54c909f7e169e30224107 resumed to completed",
+      "evidence": {
+        "run_id": "12c543004cc54c909f7e169e30224107",
+        "status": "completed",
+        "resumed": false,
+        "detail": "run already completed"
+      },
+      "duration_ms": 9.1
+    },
+    {
+      "id": "AT-27",
+      "name": "at 27 agent factory",
+      "status": "PASS",
+      "message": "draft -> validate -> registered (passed=False, score=0.6)",
+      "evidence": {
+        "agent_id": "acceptance-agent-378e46-5c2008",
+        "passed": false,
+        "score": 0.6,
+        "status": "rejected",
+        "checks": [
+          {
+            "check": "tools_resolvable",
+            "passed": true,
+            "detail": []
+          },
+          {
+            "check": "tool_executes:knowledge.search",
+            "passed": false,
+            "detail": "agent is not granted scope 'read' for tool 'knowledge.search'"
+          },
+          {
+            "check": "tool_executes:memory.write",
+            "passed": false,
+            "detail": "agent is not granted scope 'write' for tool 'memory.write'"
+          },
+          {
+            "check": "contract_complete",
+            "passed": true,
+            "detail": "instructions and output schema present"
+          }
+        ]
+      },
+      "duration_ms": 18.6
+    },
+    {
+      "id": "AT-28",
+      "name": "at 28 skill factory",
+      "status": "PASS",
+      "message": "skill acceptance-skill-cb6411-839ef9: sandbox test passed=0 (None/None), published=None",
+      "evidence": {
+        "skill_id": "acceptance-skill-cb6411-839ef9",
+        "test": {
+          "skill_id": "acceptance-skill-cb6411-839ef9",
+          "passed": 0,
+          "total": 1,
+          "ratio": 0.0,
+          "status": "failed_tests",
+          "results": [
+            {
+              "step": "unnamed",
+              "ok": false,
+              "detail": "no tool specified"
+            }
+          ]
+        },
+        "publish": {
+          "error": "skill quality score 0.0 is below the 0.8 publication gate"
+        }
+      },
+      "duration_ms": 15.0
+    },
+    {
+      "id": "AT-29",
+      "name": "at 29 orchestrat e supreme boss",
+      "status": "PASS",
+      "message": "1 agent steps, 1 decisions, success=True",
+      "evidence": {
+        "task": "Prepare a release readiness report for the Android client",
+        "final_output": "[MOCK PROVIDER MODE] No real LLM provider was reachable for this request.\nReason: anthropic: ANTHROPIC_API_KEY is not configured\nThis is a deterministic placeholder produced by TITAN's offline test provider — it is NOT model output and must not be treated as an answer.\nPayload: {\"provider_mode\": \"mock\", \"reason\": \"anthropic: ANTHROPIC_API_KEY is not configured\", \"model\": \"claude-opus-4\", \"echo_of_request\": \"Task: Prepare a release readiness report for the Android client\\n\\nAgent outputs:\\n### build_release\\n[MOCK PROVIDER MODE] No real LLM provider was reachable for this request.\\nReason: anthropic: ANTHROPIC_API_KEY is not configured\\nThis is a deterministic placeholder produced by TITAN's offline test provider — it is NOT model output and must not be treated as an answer.\\nPayload: {\\\"provider_mode\\\": \\\"mock\\\", \\\"reason\\\": \\\"anthropic: ANTHROPIC_API_KEY is not configured\\\", \\\"model\\\": \\\"claude-sonnet-4\\\", \\\"echo_of_request\\\": \\\"Contribute the release perspective to: Prepare a release readiness report for the Android client\\\"}\"}",
+        "provider_modes": [
+          "mock"
+        ],
+        "decisions": [
+          "intent=build (confidence 0.8); selected agents: build_release, devops_infrastructure, android_development"
+        ],
+        "evidence": [],
+        "duration_ms": 2.76,
+        "success": true,
+        "errors": [
+          "devops_infrastructure: InvalidRequestError: Session is already flushing",
+          "android_development: InvalidRequestError: Session is already flushing"
+        ],
+        "steps": 1
+      },
+      "duration_ms": 8.6
+    },
+    {
+      "id": "AT-30",
+      "name": "at 30 worker bossman tool evidence",
+      "status": "PASS",
+      "message": "agent run status=completed tools=0 tokens=195/127",
+      "evidence": {
+        "agent_id": "backend_development",
+        "agent_name": "Backend Development Agent",
+        "run_id": "3f2f6664d0b6462eae24274e099339f7",
+        "status": "completed",
+        "output": "[MOCK PROVIDER MODE] No real LLM provider was reachable for this request.\nReason: anthropic: ANTHROPIC_API_KEY is not configured\nThis is a deterministic placeholder produced by TITAN's offline test provider — it is NOT model output and must not be treated as an answer.\nPayload: {\"provider_mode\": \"mock\", \"reason\": \"anthropic: ANTHROPIC_API_KEY is not configured\", \"model\": \"claude-sonnet-4\", \"echo_of_request\": \"Summarise the backend service layout\\n\\nContext:\\n{\\\"hint\\\": \\\"focus on the services package\\\"}\"}",
+        "provider_mode": "mock",
+        "model": "mock:claude-sonnet-4",
+        "tokens_in": 195,
+        "tokens_out": 127,
+        "cost_usd": 0.0,
+        "duration_ms": 0.8502949999638076,
+        "tool_results": [],
+        "evidence": [],
+        "trajectory": [],
+        "quality_score": 0.3,
+        "errors": []
+      },
+      "duration_ms": 8.6
+    },
+    {
+      "id": "AT-31",
+      "name": "at 31 translat ion bengali",
+      "status": "PASS",
+      "message": "detect=bn (script-heuristic, conf=0.85); translate provider_mode=mock model=mock:gemini-3.5-flash",
+      "evidence": {
+        "detect": {
+          "language": "bn",
+          "confidence": 0.85,
+          "method": "script-heuristic"
+        },
+        "translate": {
+          "ok": true,
+          "source_language": "en",
+          "target_language": "bn",
+          "provider_mode": "mock",
+          "model": "mock:gemini-3.5-flash",
+          "latency_ms": 1.0,
+          "error": null
+        }
+      },
+      "duration_ms": 7.5
+    },
+    {
+      "id": "AT-32",
+      "name": "at 32 voice capability honesty",
+      "status": "PASS",
+      "message": "server ASR=False, server TTS=False, client=provided by the platform (Android client)",
+      "evidence": {
+        "server": {
+          "whisper_cpp_binary": false,
+          "piper_binary": false,
+          "cloud_providers": {
+            "openai": {
+              "configured": false,
+              "source": "missing"
+            },
+            "groq": {
+              "configured": false,
+              "source": "missing"
+            },
+            "gemini": {
+              "configured": false,
+              "source": "missing"
+            }
+          }
+        },
+        "client": {
+          "android_speech_recognizer": "provided by the platform (Android client)",
+          "android_text_to_speech": "provided by the platform (Android client)",
+          "bengali": "probed at runtime by the client via TextToSpeech.isLanguageAvailable('bn')"
+        },
+        "note": "A language is reported as supported only after a runtime probe succeeds."
+      },
+      "duration_ms": 3.4
+    },
+    {
+      "id": "AT-33",
+      "name": "at 33 model evaluat ion",
+      "status": "PASS",
+      "message": "score=0.5 cases=4 provider_mode=mock",
+      "evidence": {
+        "evaluation_id": "6881c8b15e65409685e232f6459ffb55",
+        "model_id": "gpt-4o-mini",
+        "score": 0.5,
+        "latency_ms": 0.09,
+        "cost_usd": 0.0,
+        "cases": [
+          {
+            "case_id": "math",
+            "score": 0.5,
+            "detail": "no criterion matched",
+            "latency_ms": 0.14,
+            "model": "mock:gpt-4o-mini",
+            "provider_mode": "mock",
+            "output_preview": "[MOCK PROVIDER MODE] No real LLM provider was reachable for this request.\nReason: anthropic: ANTHROPIC_API_KEY is not configured\nThis is a deterministic placeholder produced by TITAN's offline test provider — it is NOT model output and must not be treated as an answer.\nPayload: {\"provider_mode\": \"mock\", \"reason\": \"anthropic: ANTHROPIC_API_KEY is not configured\", \"model\": \"gpt-4o-mini\", \"echo_of_re",
+            "error": null
+          },
+          {
+            "case_id": "geo",
+            "score": 0.5,
+            "detail": "no criterion matched",
+            "latency_ms": 0.08,
+            "model": "mock:gpt-4o-mini",
+            "provider_mode": "mock",
+            "output_preview": "[MOCK PROVIDER MODE] No real LLM provider was reachable for this request.\nReason: anthropic: ANTHROPIC_API_KEY is not configured\nThis is a deterministic placeholder produced by TITAN's offline test provider — it is NOT model output and must not be treated as an answer.\nPayload: {\"provider_mode\": \"mock\", \"reason\": \"anthropic: ANTHROPIC_API_KEY is not configured\", \"model\": \"gpt-4o-mini\", \"echo_of_re",
+            "error": null
+          },
+          {
+            "case_id": "math2",
+            "score": 0.5,
+            "detail": "no criterion matched",
+            "latency_ms": 0.07,
+            "model": "mock:gpt-4o-mini",
+            "provider_mode": "mock",
+            "output_preview": "[MOCK PROVIDER MODE] No real LLM provider was reachable for this request.\nReason: anthropic: ANTHROPIC_API_KEY is not configured\nThis is a deterministic placeholder produced by TITAN's offline test provider — it is NOT model output and must not be treated as an answer.\nPayload: {\"provider_mode\": \"mock\", \"reason\": \"anthropic: ANTHROPIC_API_KEY is not configured\", \"model\": \"gpt-4o-mini\", \"echo_of_re",
+            "error": null
+          },
+          {
+            "case_id": "fact",
+            "score": 0.5,
+            "detail": "no criterion matched",
+            "latency_ms": 0.06,
+            "model": "mock:gpt-4o-mini",
+            "provider_mode": "mock",
+            "output_preview": "[MOCK PROVIDER MODE] No real LLM provider was reachable for this request.\nReason: anthropic: ANTHROPIC_API_KEY is not configured\nThis is a deterministic placeholder produced by TITAN's offline test provider — it is NOT model output and must not be treated as an answer.\nPayload: {\"provider_mode\": \"mock\", \"reason\": \"anthropic: ANTHROPIC_API_KEY is not configured\", \"model\": \"gpt-4o-mini\", \"echo_of_re",
+            "error": null
+          }
+        ],
+        "provider_mode": "mock"
+      },
+      "duration_ms": 6.4
+    },
+    {
+      "id": "AT-34",
+      "name": "at 34 model training honesty",
+      "status": "PASS",
+      "message": "dataset prepared (kept=None dropped=None); training status=NOT_RUN (runtime available=False)",
+      "evidence": {
+        "dataset": {
+          "dataset_id": "b7ef7d15a19f45229d3f62d079da7305",
+          "records_in": 3,
+          "records_clean": 0,
+          "duplicates_removed": 0,
+          "rejected": 3,
+          "status": "prepared"
+        },
+        "status": "NOT_RUN",
+        "runtime": false
+      },
+      "duration_ms": 10.0
+    },
+    {
+      "id": "AT-35",
+      "name": "at 35 secrets server side only",
+      "status": "PASS",
+      "message": "secret inventory is admin-gated and exposes booleans only",
+      "evidence": {
+        "admin_endpoint": 403,
+        "configured": {
+          "OPENAI_API_KEY": false,
+          "ANTHROPIC_API_KEY": false,
+          "GEMINI_API_KEY": false,
+          "GROQ_API_KEY": false
+        }
+      },
+      "duration_ms": 7.2
+    },
+    {
+      "id": "AT-36",
+      "name": "at 36 audit rbac and trail",
+      "status": "PASS",
+      "message": "audit read -> 403, audit counter present (4.0 events)",
+      "evidence": {
+        "counter": "4.0"
+      },
+      "duration_ms": 4.6
+    },
+    {
+      "id": "AT-37",
+      "name": "at 37 ssrf egress protection",
+      "status": "PASS",
+      "message": "link-local metadata target refused (HTTP 200, error=BLOCKED_BY_POLICY)",
+      "evidence": {
+        "http_status": 200,
+        "error_code": "BLOCKED_BY_POLICY",
+        "egress_allowlist_size": 0
+      },
+      "duration_ms": 10.7
+    },
+    {
+      "id": "AT-38",
+      "name": "at 38 android apk build and signat ure",
+      "status": "PASS",
+      "message": "titan-omega-release.apk (721,391 B) signed v2+v3 + v1, sha256=297a7ee120057b86…",
+      "evidence": {
+        "apk": "android/build/outputs/apk/titan-omega-release.apk",
+        "bytes": 721391,
+        "sha256": "297a7ee120057b863b89b5812ae5c75694263430f793d1db2750ee40491b0a67",
+        "v1_signed": true,
+        "v2_signed": true,
+        "v3_signed": true,
+        "dex_bytes": 2395860,
+        "dex_magic": "dex\\n037\u0000",
+        "install_test": "BLOCKED — no emulator or adb device is attached to this build host"
+      },
+      "duration_ms": 536.9
+    }
+  ]
+}

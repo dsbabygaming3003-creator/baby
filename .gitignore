@@ -1,0 +1,33 @@
+# --- Python ---------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- TITAN runtime data ---------------------------------------------------
+data/*.db
+data/*.db-*
+data/reports/
+data/artifacts/
+*.log
+
+# --- Android --------------------------------------------------------------
+android/build/
+android/.gradle/
+android/local.properties
+android/*.jks
+android/*.keystore
+*.apk
+*.idsig
+
+# --- Toolchain staging ----------------------------------------------------
+/tmp/titan-*
+
+# --- Editors / OS ---------------------------------------------------------
+.idea/
+.vscode/
+.DS_Store
