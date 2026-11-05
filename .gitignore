@@ -24,6 +24,9 @@ android/*.keystore
 *.apk
 *.idsig
 
+# ...except the published release artifacts, which are delivered to devices
+!releases/*.apk
+
 # --- Toolchain staging ----------------------------------------------------
 /tmp/titan-*
 
