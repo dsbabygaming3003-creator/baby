@@ -17,9 +17,17 @@ no system image (and the image hosts are outside the TLS egress allowlist).
 **State as of 2026-11-05 (session end):** backend running on `0.0.0.0:8000`,
 smoke **40/40**, acceptance **38/38**, release APK built and signed.
 
-**Delivered commit:** `d3505a2` on branch `arena/3045e0c0-baby` (87 files, 17,270
-insertions), pushed to `origin`. The APK and the SQLite database are intentionally
-**not** committed — rebuild with `bash android/tools/build_apk.sh --release`.
+**Delivered commits** on branch `arena/3045e0c0-baby`, pushed to `origin`:
+`d3505a2` (the build, 87 files) and `3e3fa7f` (published APKs).
+
+**The signed APKs are committed** under `releases/` because GitHub release-asset
+uploads are unreachable from this host (`uploads.github.com` is outside the TLS
+allowlist). The SQLite database and `android/build/` stay ignored.
+
+Download:
+`https://github.com/dsbabygaming3003-creator/baby/raw/arena/3045e0c0-baby/releases/titan-omega-release.apk`
+(sha256 `297a7ee1…`; the re-fetched copy was verified byte-identical and still
+`apksigner`-valid). Rebuild with `bash android/tools/build_apk.sh --release`.
 
 ---
 

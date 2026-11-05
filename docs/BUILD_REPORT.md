@@ -114,6 +114,27 @@ the Kotlin standard library.
 
 ---
 
+## 3b. Published download
+
+GitHub release-asset uploads are unreachable from this build host (`uploads.github.com`
+is outside the TLS allowlist), so the signed APKs are published in the repository
+instead:
+
+| File | Size | SHA-256 |
+|---|---|---|
+| `releases/titan-omega-release.apk` | 721,391 B | `297a7ee120057b863b89b5812ae5c75694263430f793d1db2750ee40491b0a67` |
+| `releases/titan-omega-debug.apk` | 721,397 B | `a5f3281bc6745957fa97b1ec404354b463013b17c62d2b1b179ad3c902da396f` |
+| `releases/SHA256SUMS.txt` | — | checksums for post-download verification |
+
+Download URL:
+`https://github.com/dsbabygaming3003-creator/baby/raw/arena/3045e0c0-baby/releases/titan-omega-release.apk`
+
+**End-to-end delivery verified:** the copy re-fetched from GitHub has a byte-identical
+git blob (`5d485446b5ed8fc2b157f121a65c922612621eee`), the same SHA-256, and passes
+`apksigner verify` (v1 + v2 + v3) on the *downloaded* file — not only on the local build.
+
+---
+
 ## 4. Installation / launch verification — BLOCKED
 
 | Step | Status | Reason |
